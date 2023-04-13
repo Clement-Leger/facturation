@@ -10,6 +10,7 @@
 ## Application de facturation, le pourquoi
 
 Entraînement/pratique de laravel/php/javascript en créant une application de facturation.
+Ma progression en tant que back-end est essentielle et cet exercice me permettra également de travailler mon côté front-end, qui ne sera toutefois pas la majeure partie de mon travail.
 
 ## Contenu
 
