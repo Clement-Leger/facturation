@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fact'App</title>
-</head>
-<body>
-    <h1>Exercice de facturation</h1>
+@extends('layout.layout')
 
-    <p>Premier test</p>
-</body>
-</html>
+
+
+
+@include('layout.end-layout')
