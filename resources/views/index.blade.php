@@ -8,5 +8,7 @@
 </head>
 <body>
     <h1>Exercice de facturation</h1>
+
+    <p>Premier test</p>
 </body>
 </html>
