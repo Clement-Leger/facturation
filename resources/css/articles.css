@@ -1,0 +1,40 @@
+.articles-container{
+    border: 3px #0082e6 solid;
+    border-radius: 5px;
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    background-color: rgba(173, 216, 230, .3);
+}
+
+.articles-options{
+    border-bottom: 2px #0082e6 solid;
+    width: 98%;
+    margin: auto;
+}
+
+.add-btn{
+    margin: 6px 0 5px 0;
+    padding: 0 5px 0 5px;
+    background-color: rgba(173, 216, 230, 1);
+    border: 2px rgb(0, 130, 230) solid;
+    border-radius: 5px;
+    height: 25px;
+    color: black;
+    font-weight: bold;
+    float: right;
+    transition: 1.5s;
+    cursor: pointer;
+}
+
+.add-btn:hover{
+    background-color: rgba(0, 130, 230, 1);
+    color: white;
+}
+
+.articles-container table, td, th{
+    border-collapse: collapse;
+    border: 1px black solid;
+    margin: auto;
+    width: 30%;
+}
