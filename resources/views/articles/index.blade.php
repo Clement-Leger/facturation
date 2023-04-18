@@ -5,8 +5,8 @@
 
 <div class="articles-container">
     <div class="articles-options">
-        <button class="add-btn">Ajouter un article</button>
-        <h4>Liste des articles</h3>
+        <a href='{{ route('add-article') }}' class="add-btn">Ajouter un article</a>
+        <h4>Liste des articles</h4>
     </div>    
     <table>
         <thead>
@@ -15,6 +15,7 @@
                 <th>Prix HT</th>
                 <th>Prix TTC</th>
                 <th>Stock</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -24,6 +25,7 @@
                     <td>{{ $article->price_excl }} €</td>
                     <td>{{ $article->price_incl }} €</td>
                     <td>{{ $article->stock }}</td>
+                    <td><button>Action</button></td>
                 </tr>
             @endforeach
         </tbody>

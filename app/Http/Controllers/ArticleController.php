@@ -10,7 +10,11 @@ class ArticleController extends Controller
     public function getArticles(){
         $articles = Article::all();
 
-        return view('index', 
+        return view('articles/index', 
         ['articles' => $articles]);
+    }
+
+    public function createArticle(){
+        return view('articles/add-article');
     }
 }

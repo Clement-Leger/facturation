@@ -23,7 +23,7 @@
     color: black;
     font-weight: bold;
     float: right;
-    transition: 1.5s;
+    transition: 0.7s;
     cursor: pointer;
 }
 
@@ -34,7 +34,8 @@
 
 .articles-container table, td, th{
     border-collapse: collapse;
-    border: 1px black solid;
-    margin: auto;
+    border: 2px rgba(0, 130, 230, 1) solid;
+    margin: 10px auto 10px auto;
     width: 30%;
+    background-color: rgba(83, 162, 223, .2);
 }

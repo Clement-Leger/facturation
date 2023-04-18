@@ -15,8 +15,8 @@
             <ul>
                 <li><a class="active" href="#">Articles ▼</a>
                     <ul class="article-menu">
-                        <li><a href="#">Ajouter un article</a></li>
-                        <li><a href="#">Liste des articles</a></li>
+                        <li><a href="{{ route('add-article') }}">Ajouter un article</a></li>
+                        <li><a href="{{ route('articles-list') }}">Liste des articles</a></li>
                         <li><a href="#">Liste de stock</a></li>
                         <li><a href="#">Liste des prix</a></li>
                     </ul>

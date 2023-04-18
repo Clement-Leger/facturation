@@ -19,3 +19,5 @@ use App\Http\Controllers\ArticleController;
 // });
 
 Route::get('/', [ArticleController::class, 'getArticles'])->name('articles-list');
+Route::get('/categories', [CatagoryController::class, 'getCategories'])->name('categories-list');
+Route::get('/add-article', [ArticleController::class, 'createArticle'])->name('add-article');
