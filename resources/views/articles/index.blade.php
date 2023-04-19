@@ -33,7 +33,4 @@
 
 </div>
 
-
 @endsection
-
-@include('layout.end-layout')

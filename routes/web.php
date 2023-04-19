@@ -15,7 +15,7 @@ use App\Http\Controllers\ArticleController;
 */
 
 // Route::get('/', function () {
-//     return view('index');
+//     return view('incex');
 // });
 
 Route::get('/', [ArticleController::class, 'getArticles'])->name('articles-list');
