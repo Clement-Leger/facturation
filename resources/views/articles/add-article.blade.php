@@ -11,37 +11,42 @@
             <div class="articles-options">
                 <h4>Ajout d'un article</h4>
             </div>    
-            <div>
-                <label for="article_name">Nom de l'article :</label>
-                <input type="text" placeholder="Votre nouvel article">
+            <div class="grid-article">
+                <div class="article-column">
+                    <label for="article_name">Nom de l'article</label>
+                    <input type="text" placeholder="Votre nouvel article">
+                    
+                    <label for="price_excl">Prix HT</label>
+                    <input type="text" placeholder="00.00">
+                    
+                    <label for="taxe_rate">Pourcentage de TVA</label>
+                    <input type="text" placeholder="0">
+                    
+                    <label for="supplier">Fournisseur</label> 
+                    {{-- CREER UN SYSTEME DE FOURNISSEUR POUR PERMETTRE DE POUVOIR GERER CETTE OPTION NORMALEMENT --}}
+                    <select class="suppliers" name="suppliers">
+                        <option value="Tartanpion">Tartanpion</option>
+                        <option value="test">test</option>
+                    </select>
+                </div>
+                
+                <div class="article-column">
+                    <label for="article_name">Catégorie de l'article</label>
+                    {{-- Select2 ne permet pas l'utilisation de width en pourcentage, ne pas retirer la balise width --}}
+                    <select style="width: 100%" class="categories" multiple="multiple" name="categories">
+                        <option value="cate">cate</option>
+                        <option value="cate2">cate2</option>
+                    </select>
 
-                <label for="article_name">Catégorie de l'article :</label>
-                {{-- CREER UN SYSTEME DE CLIC SUR LES CATEGORIES POUR LES AJOUTER A LA CHAINE --}}
-                <select class="categories" multiple="multiple" name="categories">
-                    <option value="cate">cate</option>
-                    <option value="cate2">cate2</option>
-                </select>
+                    <label for="price_incl">Prix TTC</label>
+                    <input type="text" placeholder="00.00">
 
-                <label for="price_excl">Prix HT</label>
-                <input type="text" placeholder="00.00">
+                    <label for="stock">Quantité en stock</label>
+                    <input type="text" placeholder="0">
 
-                <label for="price_incl">Prix TTC</label>
-                <input type="text" placeholder="00.00">
-
-                <label for="taxe_rate">Pourcentage de TVA</label>
-                <input type="text" placeholder="0">
-
-                <label for="stock">Quantité en stock</label>
-                <input type="text" placeholder="0">
-
-                <label for="supplier">Fournisseur</label> 
-                {{-- CREER UN SYSTEME DE FOURNISSEUR POUR PERMETTRE DE POUVOIR GERER CETTE OPTION NORMALEMENT --}}
-                <select class="suppliers" name="suppliers">
-                    <option value="Tartanpion">Tartanpion</option>
-                    <option value="test">test</option>
-                </select>
+                    <button class="add-btn">Créer l'article</button>
+                </div>
             </div>
-            <button>Créer l'article</button>
         </form>
     </div>
 @endsection
