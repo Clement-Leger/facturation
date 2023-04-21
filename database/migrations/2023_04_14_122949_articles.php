@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('article_name');
             $table->float('price_excl');
             $table->float('price_incl');
-            $table->float('tax_rate');
+            $table->integer('tax_rate');
             $table->integer('stock');
             $table->string('supplier');
             $table->timestamps();

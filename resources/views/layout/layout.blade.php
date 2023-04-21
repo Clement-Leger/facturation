@@ -22,6 +22,8 @@
                         <li><a href="#">Liste des prix</a></li>
                     </ul>
                 </li>
+                <li><a href="{{ route('categories') }}">Catégories</a></li>
+                <li><a href="{{ route('suppliers') }}">Fournisseurs</a></li>
                 <li><a href="#">Devis</a></li>
                 <li><a href="#">Bons</a></li>
                 <li><a href="#">Factures</a></li>

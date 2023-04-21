@@ -13,15 +13,17 @@ return new class extends Migration
     {
         Schema::create('article_category', function (Blueprint $table) {
             $table->id('id');
+            $table->timestamps();
+            
             $table->foreignId('article_id')
             ->constrained()
             ->onUpdate('restrict')
             ->onDelete('restrict');
+
             $table->foreignId('category_id')
             ->constrained()
             ->onUpdate('restrict')
-            ->onDelete('restrict');;
-            $table->timestamps();
+            ->onDelete('restrict');
         });
     }
 

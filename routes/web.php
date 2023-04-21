@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\{ArticleController, CategoryController, SupplierController};
 
 /*
 |--------------------------------------------------------------------------
@@ -19,5 +19,15 @@ use App\Http\Controllers\ArticleController;
 // });
 
 Route::get('/', [ArticleController::class, 'getArticles'])->name('articles-list');
-Route::get('/categories', [CatagoryController::class, 'getCategories'])->name('categories-list');
-Route::get('/add-article', [ArticleController::class, 'createArticle'])->name('add-article');
+
+// CATEGORIES 
+Route::get('/categories', [CategoryController::class, 'getCategories'])->name('categories');
+Route::get('/add-category', [CategoryController::class, 'addCategory'])->name('add-category');
+Route::post('/create-category', [CategoryController::class, 'createCategory'])->name('create-category');
+
+// ARTICLES
+Route::get('/add-article', [ArticleController::class, 'addArticle'])->name('add-article');
+Route::post('/create-article', [ArticleController::class, 'createArticle'])->name('create-article');
+
+// FOURNISSEURS
+Route::get('/suppliers', [SupplierController::class, 'getSuppliers'])->name('suppliers');
