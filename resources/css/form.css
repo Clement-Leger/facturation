@@ -48,6 +48,10 @@
     background-color: rgba(83, 162, 223, .2);
 }
 
+.articles-container table td, th{
+    padding: 3px 3px 3px 3px;
+}
+
 .grid-article{
     display: grid;
     grid-template-columns: repeat(2, 1fr);

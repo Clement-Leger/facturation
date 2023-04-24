@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Category;
+use App\Models\Supplier;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
@@ -17,9 +18,11 @@ class ArticleController extends Controller
     
     public function addArticle(){
         $categories = Category::all();
+        $suppliers = Supplier::all();
 
         return view('articles/add-article',[
-            'categories' => $categories
+            'categories' => $categories,
+            'suppliers' => $suppliers
         ]);
     }
 

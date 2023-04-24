@@ -25,8 +25,9 @@
                     <label for="suppliers">Fournisseur</label> 
                     {{-- CREER UN SYSTEME DE FOURNISSEUR POUR PERMETTRE DE POUVOIR GERER CETTE OPTION NORMALEMENT --}}
                     <select class="suppliers" name="supplier">
-                        <option value="Tartanpion">Tartanpion</option>
-                        <option value="test">test</option>
+                        @foreach ($suppliers as $supplier)
+                            <option value="{{ $supplier->name }}">{{ $supplier->name }}</option>
+                        @endforeach
                     </select>
                 </div>
                 

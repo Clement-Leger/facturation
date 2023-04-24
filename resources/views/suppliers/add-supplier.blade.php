@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="articles-container">
-        <form action="{{ route('create-article') }}" method="POST">
+        <form action="{{ route('create-supplier') }}" method="POST">
             @csrf
             <div class="articles-options">
                 <h4>Ajout d'un fournisseur</h4>
@@ -33,11 +33,11 @@
                     {{-- Select2 ne permet pas l'utilisation de width en pourcentage, ne pas retirer la balise width --}}
                     <input multiple="multiple" name="phone_number" placeholder="06 49 03...">
 
-                    <label for="Adresse">Adresse</label>
-                    <input name ="Adresse" type="text" placeholder="15 rue de la révolution">
+                    <label for="address">Adresse</label>
+                    <input name ="address" type="text" placeholder="15 rue de la révolution">
 
-                    <label for="Pays">Pays</label>
-                    <input name="Pays" type="text" placeholder="Belgique">
+                    <label for="country">Pays</label>
+                    <input name="country" type="text" placeholder="Belgique">
 
                     <label for="post_code">Code Postal</label>
                     <input name="post_code" type="text" placeholder="Code Postal">

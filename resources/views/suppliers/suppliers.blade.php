@@ -13,13 +13,19 @@
                     <thead>
                         <tr>
                             <th>Nom</th>
+                            <th>Email</th>
+                            <th>Nom de la compagnie</th>
+                            <th>Pays</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($suppliers as $supplier)
                             <tr>
-                                <td>{{ $supplier->supplier_name }}</td>
+                                <td>{{ $supplier->name }}</td>
+                                <td>{{ $supplier->email }}</td>
+                                <td>{{ $supplier->company_name }}</td>
+                                <td>{{ $supplier->country }}</td>
                                 <td><button>Action</button></td>
                             </tr>
                         @endforeach

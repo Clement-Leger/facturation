@@ -32,7 +32,8 @@ Route::post('/create-article', [ArticleController::class, 'createArticle'])->nam
 
 // FOURNISSEURS
 Route::get('/suppliers', [SupplierController::class, 'getSuppliers'])->name('suppliers');
-Route::get('/add-fournisseur', [SupplierController::class, 'addSupplier'])->name('add-supplier');
+Route::get('/add-supplier', [SupplierController::class, 'addSupplier'])->name('add-supplier');
+Route::post('/create-supplier', [SupplierController::class, 'createSupplier'])->name('create-supplier');
 
 // MIGRATIONS
 Route::get('/migrations', [migrationController::class, 'getMigrations'])->name('migrations');
