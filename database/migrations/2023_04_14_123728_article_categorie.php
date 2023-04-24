@@ -15,17 +15,18 @@ return new class extends Migration
     {
         Schema::create('article_category', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             
             $table->foreignId('article_id')
             ->constrained()
-            ->onUpdate('restrict')
-            ->onDelete('restrict');
-
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
+            
             $table->foreignId('category_id')
             ->constrained()
-            ->onUpdate('restrict')
-            ->onDelete('restrict');
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
+            
+            $table->timestamps();
         });
     }
 

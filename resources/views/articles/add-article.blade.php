@@ -35,7 +35,7 @@
                     {{-- Select2 ne permet pas l'utilisation de width en pourcentage, ne pas retirer la balise width --}}
                     <select style="width: 100%" class="categories" multiple="multiple" name="category_name[]">
                         @foreach ($categories as $category)
-                            <option value="{{ $category->category_id }}">{{ $category->category_name }}</option>
+                            <option value="{{ $category->id }}">{{ $category->category_name }}</option>
                         @endforeach
                         
                     </select>
