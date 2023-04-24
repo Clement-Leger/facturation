@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{ArticleController, CategoryController, SupplierController, migrationController};
+use App\Models\Supplier;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,7 @@ Route::post('/create-article', [ArticleController::class, 'createArticle'])->nam
 
 // FOURNISSEURS
 Route::get('/suppliers', [SupplierController::class, 'getSuppliers'])->name('suppliers');
+Route::get('/add-fournisseur', [SupplierController::class, 'addSupplier'])->name('add-supplier');
 
 // MIGRATIONS
 Route::get('/migrations', [migrationController::class, 'getMigrations'])->name('migrations');

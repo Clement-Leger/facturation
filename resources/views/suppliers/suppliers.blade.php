@@ -5,6 +5,7 @@
         <form action="{{ route('create-category') }}" method="POST">
             @csrf
             <div class="articles-options">
+                <a href="{{ route('add-supplier') }}" class="add-btn">Ajouter un fournisseur</a>
                 <h4>Liste des fournisseurs</h4>
             </div>
             <div>
@@ -24,7 +25,6 @@
                         @endforeach
                     </tbody>
                 </table>            
-                <button class="add-btn">Ajouter un fournisseur</button>
             </div>
         </form>
     </div>

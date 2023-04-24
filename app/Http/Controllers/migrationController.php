@@ -15,7 +15,7 @@ class migrationController extends Controller
     }
 
     public function runMigrations(){
-        // return $this->migrateSupplier();
+        return $this->migrateSupplier();
     }
 
     public function migrateSupplier(){
@@ -27,6 +27,7 @@ class migrationController extends Controller
                 $table->id('supplier_id');
                 $table->string('name');
                 $table->string('email');
+                $table->string('company_registration_number');
                 $table->string('company_name');
                 $table->string('phone_number');
                 $table->string('address');
@@ -37,6 +38,8 @@ class migrationController extends Controller
     
             dump('La table suppliers a bien été créée');
         }
+
+        return redirect('migrations');
     }
 
     function migrateUsers(){
