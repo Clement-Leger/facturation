@@ -5,12 +5,26 @@
         <form action="{{ route('create-category') }}" method="POST">
             @csrf
             <div class="articles-options">
-                <h4>Ajout d'une categorie</h4>
+                <h4>Liste des fournisseurs</h4>
             </div>
             <div>
-                <label for="category_name">Nom de la catégorie</label>
-                <input name="category_name" type="text">
-                <button class="add-btn">Créer la catégorie</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($suppliers as $supplier)
+                            <tr>
+                                <td>{{ $supplier->supplier_name }}</td>
+                                <td><button>Action</button></td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>            
+                <button class="add-btn">Ajouter un fournisseur</button>
             </div>
         </form>
     </div>

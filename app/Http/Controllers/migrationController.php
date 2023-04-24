@@ -9,6 +9,36 @@ use Illuminate\Support\Facades\Schema;
 class migrationController extends Controller
 {
     //
+
+    public function getMigrations(){
+        return view('migrations/migrations');
+    }
+
+    public function runMigrations(){
+        // return $this->migrateSupplier();
+    }
+
+    public function migrateSupplier(){
+
+        if(Schema::hasTable('suppliers')){
+            dump('La table suppliers existe déjà.');
+        } else {
+            Schema::create('suppliers', function (Blueprint $table) {
+                $table->id('supplier_id');
+                $table->string('name');
+                $table->string('email');
+                $table->string('company_name');
+                $table->string('phone_number');
+                $table->string('address');
+                $table->string('country');
+                $table->integer('post_code');
+                $table->timestamps();
+            });
+    
+            dump('La table suppliers a bien été créée');
+        }
+    }
+
     function migrateUsers(){
         Schema::create('users', function(Blueprint $table){
             $table->id('user_id');
@@ -65,21 +95,21 @@ class migrationController extends Controller
         });
     }
 
-    function migrateSupplier(){
-        Schema::create('supplier', function(Blueprint $table){
-            $table->id('supplier_id');
-            $table->string('supplier_firstname',255);
-            $table->string('supplier_lastname',255);
-            $table->string('adress',255);
-            $table->string('email',255);
-            $table->string('phone_number',100);
-            $table->float('discount');
-            $table->string('city',255);
-            $table->string('postal_code',50);
-            $table->string('country', 255);
-            $table->timestamps();
-        });
-    }
+    // function migrateSupplier(){
+    //     Schema::create('supplier', function(Blueprint $table){
+    //         $table->id('supplier_id');
+    //         $table->string('supplier_firstname',255);
+    //         $table->string('supplier_lastname',255);
+    //         $table->string('adress',255);
+    //         $table->string('email',255);
+    //         $table->string('phone_number',100);
+    //         $table->float('discount');
+    //         $table->string('city',255);
+    //         $table->string('postal_code',50);
+    //         $table->string('country', 255);
+    //         $table->timestamps();
+    //     });
+    // }
 
     function migrateDocument(){
         Schema::create('document_tracking', function(Blueprint $table){

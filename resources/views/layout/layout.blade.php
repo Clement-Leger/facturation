@@ -27,7 +27,8 @@
                 <li><a href="#">Devis</a></li>
                 <li><a href="#">Bons</a></li>
                 <li><a href="#">Factures</a></li>
-
+                <li><a href="{{ route('migrations') }}">Migrations</a></li>
+            </ul>
     </nav>
 
     @yield('content')

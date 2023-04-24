@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{ArticleController, CategoryController, SupplierController};
+use App\Http\Controllers\{ArticleController, CategoryController, SupplierController, migrationController};
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +31,7 @@ Route::post('/create-article', [ArticleController::class, 'createArticle'])->nam
 
 // FOURNISSEURS
 Route::get('/suppliers', [SupplierController::class, 'getSuppliers'])->name('suppliers');
+
+// MIGRATIONS
+Route::get('/migrations', [migrationController::class, 'getMigrations'])->name('migrations');
+Route::any('/run-migration', [migrationController::class, 'runMigrations'])->name('run-migrations');
